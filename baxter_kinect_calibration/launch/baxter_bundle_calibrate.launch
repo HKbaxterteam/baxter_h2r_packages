@@ -4,15 +4,20 @@
 	<arg name="max_new_marker_error" default="0.08" />
 	<arg name="max_track_error" default="0.2" />
 
-	<arg name="kinect_image_topic" default="/openni/depth_registered/points" />
+	<!--arg name="kinect_image_topic" default="/openni/depth_registered/points" />
 	<arg name="kinect_info_topic" default="/openni/depth_registered/camera_info" />		
-	<arg name="kinect_base_frame" default="/openni_link" />
+	<arg name="kinect_base_frame" default="/openni_link" /-->
+
+	<arg name="kinect_image_topic" default="/kinect2/hd/points" />
+	<arg name="kinect_info_topic" default="/kinect2/hd/camera_info" />		
+	<arg name="kinect_base_frame" default="/kinect2_rgb_optical_frame" />
+
 
 	<arg name="calibrated_image_topic" default="/cameras/left_hand_camera/image" />
 	<arg name="calibrated_info_topic" default="/cameras/left_hand_camera/camera_info" />		
 	<arg name="calibrated_frame" default="/left_hand_camera" />
 
-	<arg name="output_frame" default="/world" />
+	<arg name="output_frame" default="/reference/base" />
 	<arg name="median_filter_size" default="10" />
 
 	<arg name="calibration_bundle" default="$(find baxter_kinect_calibration)/bundles/table_8_9_10.xml" />
